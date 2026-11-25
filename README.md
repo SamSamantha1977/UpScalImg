@@ -30,7 +30,7 @@ The heavy native dependencies are attached to the versioned GitHub Release in th
 
 Les distributions sont séparées pour ce dépôt :
 
-- [Skill Python OpenAI v1.0.1](https://github.com/SamSamantha1977/UpScalImg/releases/download/v1.0.1/upscayl-image.zip)
+- [Skill Python OpenAI v1.0.2](https://github.com/SamSamantha1977/UpScalImg/releases/download/v1.0.2/upscayl-image.zip)
 - [Dépendances natives Windows x64](https://github.com/SamSamantha1977/UpScalImg/releases/tag/deps-v1.0.0)
 - Manifeste avec URL et empreintes SHA-256 : [dependencies.json](upscayl-image/references/dependencies.json)
 

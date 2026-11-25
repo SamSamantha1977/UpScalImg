@@ -201,7 +201,7 @@ def enhance(src: Path, dst: Path, scale: int, model: str, force: bool) -> None:
         raw = Path(d) / "enhanced.png"
         native_scale = 4 if scale == 1 else scale
         cmd = [exe, "-i", str(src), "-o", str(raw), "-n", model, "-s", str(native_scale), "-m", models, "-f", "png"]
-        result = subprocess.run(cmd, capture_output=True, text=True, timeout=7200)
+        result = subprocess.run(cmd, capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=7200)
         if result.returncode != 0 or not raw.is_file():
             raise RuntimeError(f"Upscayl NCNN failed ({result.returncode}): {result.stderr[-600:]}")
         stage = Path(d) / "stage.png"
