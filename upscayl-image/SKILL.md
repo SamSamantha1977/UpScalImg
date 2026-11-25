@@ -36,3 +36,11 @@ FFmpeg n'est pas requis pour resize/compress dans cette édition ; Pillow suffit
 
 ## Publication
 Ce ZIP est autonome de Video2X-Video. Une installation sur les Skills de l'API OpenAI ne signifie pas automatiquement une présence dans la galerie ChatGPT ni un accès au GPU/Internet. Tester dans l'environnement d'exécution réel.
+
+## Distribution GitHub officielle de cette skill
+
+- Dépôt de cette skill exclusivement : https://github.com/SamSamantha1977/UpScalImg
+- Archive légère : https://github.com/SamSamantha1977/UpScalImg/releases/download/v1.0.1/upscayl-image.zip
+- Release de dépendances natives vérifiées par SHA-256 : https://github.com/SamSamantha1977/UpScalImg/releases/tag/deps-v1.0.0
+- Ne jamais charger les fichiers de l'autre skill ni utiliser le dépôt historique mixte.
+- Les binaires Windows ne fonctionnent pas sous Linux. Les moteurs IA ont leurs propres licences et peuvent nécessiter Vulkan.

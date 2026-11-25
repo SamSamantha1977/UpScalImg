@@ -1,12 +1,14 @@
 {
   "repository": "SamSamantha1977/UpScalImg",
   "created_on_github": true,
-  "native_assets_published": false,
+  "native_assets_published": true,
   "skill_zip": "upscayl-image.zip",
   "assets": [
     "ffmpeg-windows-x64-2025-02-13.zip",
     "upscayl-ncnn-windows-x64-1.1.0.zip"
   ],
   "release_tag": "deps-v1.0.0",
-  "release_repository": "SamSamantha1977/UpScalImg"
+  "release_repository": "SamSamantha1977/UpScalImg",
+  "remote_release_verified": true,
+  "light_release_tag": "v1.0.1"
 }
