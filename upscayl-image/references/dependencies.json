@@ -7,18 +7,18 @@
     "upscayl-ncnn": {
       "windows-x64": {
         "url": "https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/upscayl-ncnn-windows-x64-1.1.0.zip",
-        "sha256": "805274df20ef1855133df60431fe73eb3da70ee1e37bee12b4c69f763a56c748",
+        "sha256": "006ee0ddfb43b5bbb3ba3be54808af8ed7ca557ccd2c0cc38b022ac8aeb26477",
         "file": "upscayl-ncnn-windows-x64-1.1.0.zip",
-        "bytes": 233905761,
+        "bytes": 228459700,
         "published": false
       }
     },
     "ffmpeg": {
       "windows-x64": {
         "url": "https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/ffmpeg-windows-x64-2025-02-13.zip",
-        "sha256": "684fc9adee65ff4d0adaf5c269d00be490403e0e68938c6e0974fe31ae51a945",
+        "sha256": "54d99f06e60e16e2f2835eed9c30584e5ddf407ff61e5e7a3a65e5065c67ed5e",
         "file": "ffmpeg-windows-x64-2025-02-13.zip",
-        "bytes": 130661781,
+        "bytes": 121652518,
         "published": false
       }
     }
