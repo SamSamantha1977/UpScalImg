@@ -1,0 +1,43 @@
+{
+  "schema": "sam-media-skill-dependencies.v2",
+  "owner": "SamSamantha1977",
+  "publication_status": "PUBLISHED_VERIFIED",
+  "notes": "Liens GitHub ou GitHub d'origine publies, SHA256 reels verifies; depots = ressources, ZIP skills = distributions independantes.",
+  "artifacts": {
+    "upscayl-ncnn": {
+      "windows-x64": {
+        "url": "https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/upscayl-ncnn-windows-x64-1.1.0.zip",
+        "sha256": "006ee0ddfb43b5bbb3ba3be54808af8ed7ca557ccd2c0cc38b022ac8aeb26477",
+        "file": "upscayl-ncnn-windows-x64-1.1.0.zip",
+        "bytes": 228459700,
+        "published": true
+      },
+      "linux-x64": {
+        "url": "https://github.com/upscayl/upscayl-ncnn/releases/download/20251207-174704/upscayl-bin-20251207-174704-linux.zip",
+        "sha256": "a9fab3c770b62f2b7a35d8d6d61eb4e8b3aef79128b665c919d080b85a2292f2",
+        "bytes": 3952825,
+        "published": true,
+        "supporting": [
+          {
+            "url": "https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/upscayl-ncnn-windows-x64-1.1.0.zip",
+            "sha256": "006ee0ddfb43b5bbb3ba3be54808af8ed7ca557ccd2c0cc38b022ac8aeb26477",
+            "bytes": 228459700,
+            "purpose": "Only .bin/.param weights are extracted from Windows package"
+          }
+        ]
+      }
+    },
+    "ffmpeg": {
+      "windows-x64": {
+        "url": "https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/ffmpeg-windows-x64-2025-02-13.zip",
+        "sha256": "54d99f06e60e16e2f2835eed9c30584e5ddf407ff61e5e7a3a65e5065c67ed5e",
+        "file": "ffmpeg-windows-x64-2025-02-13.zip",
+        "bytes": 121652518,
+        "published": true
+      }
+    }
+  },
+  "distribution_repository": "https://github.com/SamSamantha1977/UpScalImg",
+  "distribution_role": "dependency_resources_only",
+  "installation_policy": "automatic at runtime when missing; pinned HTTPS and SHA256 only"
+}

@@ -1,38 +1,30 @@
-# UpScalImg
+# UpScalImg — dépôt de dépendances exclusivement
 
-Independent Python 3.11+ OpenAI Skill, by Sam.
+Ce dépôt GitHub ne distribue PAS les archives ZIP des skills. Les ZIP légers sont autonomes et fournis séparément.
+Ce dépôt contient les dépendances lourdes (GitHub Releases), les manifestes SHA-256 et les références d'origine.
 
-The lightweight Skill ZIP is upscayl-image.zip.
-Its unpacked source lives in upscayl-image/ (see SKILL.md and references/RUNTIME.md).
-These are source distributions, not a promise of cloud GPU/installation access.
+## Moteurs, modèles et distributions
 
-## Native dependencies (NOT YET PUBLISHED)
-Native binaries and model weights are NOT in Git history or the light ZIP.
-They must be published separately as release assets after complete licence review.
-Each downloader refuses missing releases and checks SHA256 before extraction.
+- upscayl-ncnn / windows-x64 : 228459700 octets
+  - Téléchargement : https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/upscayl-ncnn-windows-x64-1.1.0.zip
+  - SHA-256 : 006ee0ddfb43b5bbb3ba3be54808af8ed7ca557ccd2c0cc38b022ac8aeb26477
+- upscayl-ncnn / linux-x64 : 3952825 octets
+  - Téléchargement : https://github.com/upscayl/upscayl-ncnn/releases/download/20251207-174704/upscayl-bin-20251207-174704-linux.zip
+  - SHA-256 : a9fab3c770b62f2b7a35d8d6d61eb4e8b3aef79128b665c919d080b85a2292f2
+- ffmpeg / windows-x64 : 121652518 octets
+  - Téléchargement : https://github.com/SamSamantha1977/UpScalImg/releases/download/deps-v1.0.0/ffmpeg-windows-x64-2025-02-13.zip
+  - SHA-256 : 54d99f06e60e16e2f2835eed9c30584e5ddf407ff61e5e7a3a65e5065c67ed5e
 
-- ffmpeg-windows-x64-2025-02-13.zip; bytes=130661781; sha256=684fc9adee65ff4d0adaf5c269d00be490403e0e68938c6e0974fe31ae51a945
-- upscayl-ncnn-windows-x64-1.1.0.zip; bytes=233905761; sha256=805274df20ef1855133df60431fe73eb3da70ee1e37bee12b4c69f763a56c748
+## Licences et limites
 
-Redistribution of upstream FFmpeg, Upscayl, Video2X, bundled DLLs, models and weight files
-requires third-party licence verification and relevant notices/source obligations.
-The project source licence is not assigned yet; no implied third-party licence granted.
+Conserver THIRD_PARTY_NOTICES.md et les licences d'origine, notamment les conditions propres aux poids IA.
+Les moteurs nécessitent le système/architecture correspondant, les bibliothèques compatibles et parfois un GPU Vulkan.
+Les modèles et moteurs Windows ne sont pas exécutables sur Linux. Certains poids IA peuvent être communs aux deux systèmes.
+Les poids Upscayl d'origine sont référencés dans UPSTREAMS.md; Real-ESRGAN et RIFE sont inclus dans les archives Video2X.
+L'exécution réelle des moteurs Linux doit être validée sur une machine Linux équipée d'un GPU compatible.
 
-## Validation
-Tested on MINIPC Python 3.11.9; remote ChatGPT Skill runtime not yet validated.
-No credential, Cassandre file, private user media, or Windows executable is tracked.
+## Utilisation par la skill
 
-## GitHub release distribution
-
-The heavy native dependencies are attached to the versioned GitHub Release in this repository only. Every download URL and SHA-256 in upscayl-image/references/dependencies.json must point to this repository. See the actual Release assets and documented supported platform matrix; Windows binaries do not run on Linux or macOS.
-
-## Téléchargements vérifiés
-
-Les distributions sont séparées pour ce dépôt :
-
-- [Skill Python OpenAI v1.0.2](https://github.com/SamSamantha1977/UpScalImg/releases/download/v1.0.2/upscayl-image.zip)
-- [Dépendances natives Windows x64](https://github.com/SamSamantha1977/UpScalImg/releases/tag/deps-v1.0.0)
-- Manifeste avec URL et empreintes SHA-256 : [dependencies.json](upscayl-image/references/dependencies.json)
-
-Les modules natifs tiers conservent leurs propres licences. Voir [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
-Pour un environnement ChatGPT Linux, les exécutables Windows ne sont **pas** utilisables ; la skill recherche d'abord les logiciels présents dans l'environnement.
+Au lancement d'un mode nécessitant un moteur absent, la skill télécharge les actifs HTTPS épinglés
+dans dependencies.json et valide le SHA-256 avant extraction ou exécution.
+La variable SAM_SKILL_AUTO_DOWNLOAD=0 empêche tout téléchargement automatique.
